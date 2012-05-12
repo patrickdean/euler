@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Patrick Dean
 # Project Euler: #001
 # I experimented with several different methods of solving this one in Python.
