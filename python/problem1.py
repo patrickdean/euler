@@ -22,7 +22,7 @@ def method_3(n):
     return sum([x for x in range(n) if x % 3 == 0 or x % 5 == 0])
     
 def method_4(n):
-    return sum([x for x in range(3,n,3)] + [x for x in range(5,n,5)])
+    return sum(set([x for x in range(3,n,3)] + [x for x in range(5,n,5)]))
     
 def method_5(n):
     x = []
@@ -37,7 +37,7 @@ def method_6(n):
         x.append(i)
     for i in range(5, n, 5):
         x.append(i)
-    return sum(x)
+    return sum(set(x))
 
 def method_7(n):
     return sum_dev_by(n, 3) + sum_dev_by(n, 5) - sum_dev_by(n, 15)
