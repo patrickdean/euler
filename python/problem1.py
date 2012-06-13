@@ -11,7 +11,6 @@ def exec_time(n, func, x):
         func(x)
     return time.time() - start
 
-
 def method_1(n):
     return sum(set(range(5,n,5)) | set(range(3,n,3)))
     
@@ -41,7 +40,6 @@ def method_6(n):
 
 def method_7(n):
     return sum_dev_by(n, 3) + sum_dev_by(n, 5) - sum_dev_by(n, 15)
-    
     
 def sum_dev_by(target, n):
     p = (target - 1) / n
