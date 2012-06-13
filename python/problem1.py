@@ -47,10 +47,13 @@ def sum_dev_by(target, n):
     p = (target - 1) / n
     return n * (p * (p + 1)) / 2
 
-print exec_time(10, method_1, 100000)    
-print exec_time(10, method_2, 100000)
-print exec_time(10, method_3, 100000)
-print exec_time(10, method_4, 100000)
-print exec_time(10, method_5, 100000)
-print exec_time(10, method_6, 100000)
-print exec_time(10, method_7, 100000)
+times = 100
+limit = 1000
+
+print 'Method 1:', exec_time(times, method_1, limit)    
+print 'Method 2:', exec_time(times, method_2, limit)
+print 'Method 3:', exec_time(times, method_3, limit)
+print 'Method 4:', exec_time(times, method_4, limit)
+print 'Method 5:', exec_time(times, method_5, limit)
+print 'Method 6:', exec_time(times, method_6, limit)
+print 'Method 7:', exec_time(times, method_7, limit)
