@@ -6,7 +6,7 @@ class Array
   def slice_product len
       max = 0
       (size - len + 1).times do |n|
-          a = self[n..-1].take(len)
+          a = self[n..(n + len - 1)]
           prod = a.reduce(:*)
           max = prod > max ? prod : max
       end
@@ -20,4 +20,8 @@ print "The greatest product of 5 consecutive digits of test_num is: "
 puts test_num.to_s.each_char.map(&:to_i).slice_product(5)
 
 solution = str.each_char.map(&:to_i).slice_product(5)
+puts "The greatest product of 5 consecutive digits of number is: #{solution}"
+
+# Learned about Array.each_cons, so I added this solution:
+solution = str.each_char.map(&:to_i).each_cons(5).map { |a| a.reduce(:*) }.max
 puts "The greatest product of 5 consecutive digits of number is: #{solution}"

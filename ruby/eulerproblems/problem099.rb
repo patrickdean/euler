@@ -2,8 +2,8 @@
 
 numbers = []
 File.open('infiles/problem099.txt').each do |line|
-  line = line.split(',')
-	numbers << line[1].to_i * Math.log(line[0].to_i)
+  line = line.split(',').map(&:to_i)
+  numbers << line[1] * Math.log(line[0])
 end
 	
 max = 0

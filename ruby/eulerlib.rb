@@ -1,17 +1,14 @@
-
-
-
 class Integer
-    def !
+    def factorial
         (1..self.abs).reduce(:*) || 1
     end
     
     def combination r
-        self.! / ((self - r).! * r.!)
+        self.factorial / ((self - r).factorial * r.factorial)
     end
     
     def permutation r
-        self.! / (self - r).!
+        self.factorial / (self - r).factorial
     end
     
     def fibonacci
