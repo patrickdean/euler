@@ -1,11 +1,11 @@
 # Project Euler problem 025
 
 def fibonacci limit
-    a, b = 0, 1
-    while a.to_s.size < limit
-        yield a
-        a, b = b, a + b
-    end
+  a, b = 0, 1
+  while a.to_s.size < limit
+    yield a
+    a, b = b, a + b
+  end
 end
 
 digits = 1000

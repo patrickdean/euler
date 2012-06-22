@@ -13,7 +13,7 @@ f = (1..limit).map { |n| collatz(n) }
 
 solution = f.each_with_index.max[1] + 1
 
-puts "The number under #{limit} with the largest collatz series is #{solution}."
+puts "The number under #{limit} with the largest collatz series is #{solution}"
 
 
 

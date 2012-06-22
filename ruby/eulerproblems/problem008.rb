@@ -22,6 +22,6 @@ puts test_num.to_s.each_char.map(&:to_i).slice_product(5)
 solution = str.each_char.map(&:to_i).slice_product(5)
 puts "The greatest product of 5 consecutive digits of number is: #{solution}"
 
-# Learned about Array.each_cons, so I added this solution:
+# Learned about Enumerable.each_cons, so I added this solution:
 solution = str.each_char.map(&:to_i).each_cons(5).map { |a| a.reduce(:*) }.max
 puts "The greatest product of 5 consecutive digits of number is: #{solution}"

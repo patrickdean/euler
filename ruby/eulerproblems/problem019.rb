@@ -5,6 +5,8 @@ require 'date'
 months = (1..12).to_a
 years = (1901..2000).to_a
 
-result = years.product(months).select { |year, month| Date.new(year, month, 1).sunday? }.size
+result = years.product(months).select do |year, month| 
+  Date.new(year, month, 1).sunday? 
+end.size
 
-puts "Number of Sundays occuring on the first of the month from 1901-2000: #{result}"
+puts "Sundays occuring on the first of the month from 1901-2000: #{result}"
