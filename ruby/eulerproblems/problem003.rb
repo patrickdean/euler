@@ -8,6 +8,6 @@ def largest_factor(n)
 end
 
 
-puts "The largest prime factor of 13195 if #{largest_factor 13195}"
+puts "The largest prime factor of 13195 is #{largest_factor 13195}"
 
-puts "The largest prime factor of 600851475143 if #{largest_factor 600851475143}"
+puts "The largest prime factor of 600851475143 is #{largest_factor 600851475143}"
